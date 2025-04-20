@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Lexend";
+  src: local("Lexend"), url("./assets/fonts/Lexend.ttf");
+  font-weight: normal;
+}
+
+body {
+  font-family: "Lexend", sans-serif !important;
+}
+
+@font-face {
+  font-family: "MyIcons";
+  src: url("./assets/fonts/MyIcons.woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: inline;
+}
+
+.my-icons {
+  font-family: "MyIcons";
+  font-weight: normal;
+  font-style: normal;
+
+  text-transform: none;
+  display: inline;
+  line-height: 1;
+
+  padding: 1px;
+  width: fit-content !important;
+  height: fit-content !important;
+
+  /* Fix for vertical alignment */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

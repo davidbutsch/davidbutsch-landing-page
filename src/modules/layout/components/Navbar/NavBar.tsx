@@ -1,5 +1,5 @@
 import { DAVID_BUTSCH_LOGO_URL } from "@/common";
-import { AppBar, Box, Button, Stack, Toolbar } from "@mui/material";
+import { AppBar, Box, Button, Container, Stack, Toolbar } from "@mui/material";
 import { Link } from "react-router-dom";
 
 import { ContactDialog } from "@/modules/home/components/ContactDialog";
@@ -22,7 +22,7 @@ const NavigationLinks = () => {
   return (
     <>
       <ContactDialog open={contactDialogOpen} setOpen={setContactDialogOpen} />
-      <Stack direction="row" justifyContent="end" spacing={1.5} flex={1}>
+      <Stack direction="row" justifyContent="end" gap={1.5} flex={1}>
         <a href="/David_Butsch_Resume_Apr_25.pdf" download>
           <Button variant="outlined" color="white">
             Resume
@@ -43,23 +43,24 @@ const NavigationLinks = () => {
 export const NavBar = () => {
   return (
     <AppBar
-      position="sticky"
       color="inherit"
       sx={{
         bgcolor: "background.default",
       }}
       elevation={0}
     >
-      <Toolbar
-        sx={{
-          height: 72,
-        }}
-      >
-        <Stack justifyContent="center" direction="row" width="100%">
-          <Logo />
-          <NavigationLinks />
-        </Stack>
-      </Toolbar>
+      <Container maxWidth="xl" disableGutters>
+        <Toolbar
+          sx={{
+            height: 72,
+          }}
+        >
+          <Stack justifyContent="center" direction="row" width="100%">
+            <Logo />
+            <NavigationLinks />
+          </Stack>
+        </Toolbar>
+      </Container>
     </AppBar>
   );
 };

@@ -1,5 +1,5 @@
 import { HERO_URL } from "@/common";
-import { Box, Button, Icon, Stack, Typography } from "@mui/material";
+import { Box, Button, Container, Icon, Stack, Typography } from "@mui/material";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ContactDialog } from "./ContactDialog";
@@ -19,93 +19,96 @@ const links = [
   },
 ];
 
-function HeroImage() {
+const HeroImage = () => {
   return (
     <Box
-      sx={{
-        padding: { xs: 2, sm: 4, md: "none" },
-        flex: 1,
-      }}
-    >
-      <Box
-        component="img"
-        sx={{
-          height: { md: "100vh" },
-          maxHeight: "800px",
-        }}
-        src={HERO_URL}
-      />
-    </Box>
+      component="img"
+      ml="auto" // pushes image to the far right
+      src={HERO_URL}
+    />
   );
-}
+};
+
+type HeroTypographyOptions = {
+  setContactDialogOpen: (value: boolean) => void;
+};
+
+const HeroTypography = ({ setContactDialogOpen }: HeroTypographyOptions) => {
+  return (
+    <Stack
+      gap={4}
+      pb={5} // add 40px padding from bottom of screen
+    >
+      <Typography
+        sx={{
+          typography: { xs: "h3", lg: "h2" },
+          fontWeight: "bold !important",
+        }}
+      >
+        I bring companies to the web.
+      </Typography>
+      <Typography variant="subtitle1" color="textSecondary">
+        Full-stack development, UI/UX design, and cloud infastructure—handled
+        from start to finish.
+      </Typography>
+      <Button
+        onClick={() => setContactDialogOpen(true)}
+        size="large"
+        variant="contained"
+        sx={{
+          marginBottom: { xs: 2, md: "auto" },
+          width: "fit-content",
+        }}
+      >
+        Let's talk
+      </Button>
+      <Stack direction="row" spacing={3}>
+        {links.map((link) => (
+          <Link
+            to={link.to}
+            style={{
+              textDecoration: "none",
+              color: "inherit",
+            }}
+          >
+            <Icon
+              className="my-icons"
+              sx={{
+                color: (theme) => theme.palette.text.secondary,
+
+                "&:hover": {
+                  color: "inherit",
+                },
+              }}
+            >
+              {link.icon}
+            </Icon>
+          </Link>
+        ))}
+      </Stack>
+    </Stack>
+  );
+};
 
 export const Hero = () => {
   const [contactDialogOpen, setContactDialogOpen] = useState(false);
 
   return (
-    <>
+    <Container>
       <ContactDialog open={contactDialogOpen} setOpen={setContactDialogOpen} />
       <Stack
+        gap={{ xs: 4, sm: 8, md: 4, lg: 16 }}
         direction={{ sm: "column", md: "row" }}
         sx={{
-          height: "calc(100vh - 72px)",
-          maxHeight: { xs: "none", md: "800px" },
-          overflow: { xs: "none", md: "hidden" },
+          pt: 5,
+          height: { xs: "inherit", md: "calc(100vh - 72px)" }, // computes visible desktop screen height taking into account navbar (72px).
+          maxHeight: { xs: "none", md: "800px" }, // caps hero height for tall screens (unless mobile)
+          overflowX: "clip",
         }}
       >
-        <Stack
-          gap={{ xs: 2, md: 4 }}
-          sx={{
-            padding: { xs: 2, sm: 4, lg: 6 },
-            flex: { xs: 0, md: 1 },
-          }}
-        >
-          <Typography
-            sx={{
-              typography: { xs: "h3", lg: "h2" },
-              fontWeight: "bold !important",
-            }}
-          >
-            I bring companies online.
-          </Typography>
-          <Button
-            onClick={() => setContactDialogOpen(true)}
-            size="large"
-            variant="contained"
-            sx={{
-              marginBottom: { xs: 2, md: "auto" },
-              width: "fit-content",
-            }}
-          >
-            Let's talk
-          </Button>
-          <Stack direction="row" spacing={3}>
-            {links.map((link) => (
-              <Link
-                to={link.to}
-                style={{
-                  textDecoration: "none",
-                  color: "inherit",
-                }}
-              >
-                <Icon
-                  className="my-icons"
-                  sx={{
-                    color: (theme) => theme.palette.text.secondary,
-
-                    "&:hover": {
-                      color: "inherit",
-                    },
-                  }}
-                >
-                  {link.icon}
-                </Icon>
-              </Link>
-            ))}
-          </Stack>
-        </Stack>
+        <HeroTypography setContactDialogOpen={setContactDialogOpen} />
         <HeroImage />
       </Stack>
-    </>
+    </Container>
   );
 };

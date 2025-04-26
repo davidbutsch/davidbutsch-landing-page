@@ -2,7 +2,7 @@ import { DAVID_BUTSCH_LOGO_URL } from "@/common";
 import { AppBar, Box, Button, Container, Stack, Toolbar } from "@mui/material";
 import { Link } from "react-router-dom";
 
-import { ContactDialog } from "@/modules/home/components/ContactDialog";
+import { ContactDialog } from "@/modules/home";
 import { useState } from "react";
 
 const Logo = () => {
@@ -43,10 +43,9 @@ const NavigationLinks = () => {
 export const NavBar = () => {
   return (
     <AppBar
+      position="absolute"
       color="inherit"
-      sx={{
-        bgcolor: "background.default",
-      }}
+      sx={{ bgcolor: "transparent" }}
       elevation={0}
     >
       <Container maxWidth="xl" disableGutters>

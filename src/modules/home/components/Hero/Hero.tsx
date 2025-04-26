@@ -2,6 +2,7 @@ import { HERO_IMAGE_URL } from "@/common";
 import { Container, Stack } from "@mui/material";
 import { useState } from "react";
 import { ContactDialog } from "../ContactDialog";
+import { HeroGradient } from "./HeroGradient";
 import { HeroImage } from "./HeroImage";
 import { HeroTypography } from "./HeroTypography";
 
@@ -10,6 +11,7 @@ export const Hero = () => {
 
   return (
     <Container>
+      <HeroGradient />
       <ContactDialog open={contactDialogOpen} setOpen={setContactDialogOpen} />
       <Stack
         gap={{ xs: 4, sm: 8, md: 4, lg: 16 }}

@@ -8,7 +8,7 @@ const createColor = (mainColor: string) =>
 export const palette: PaletteOptions = {
   mode: "dark",
   primary: { main: "#6B52D0" },
-  secondary: { main: "#422680" },
+  secondary: { main: "#D06B52" },
   white: createColor("#FFFFFF"),
   success: {
     main: "#50C878",

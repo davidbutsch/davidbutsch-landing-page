@@ -3,7 +3,7 @@ import { Stack } from "@mui/material";
 
 export const HomePage = () => {
   return (
-    <Stack direction="column" gap={15}>
+    <Stack direction="column" gap={15} pb={15}>
       <Hero />
     </Stack>
   );

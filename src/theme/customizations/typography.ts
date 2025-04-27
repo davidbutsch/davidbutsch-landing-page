@@ -9,30 +9,22 @@ export const typographyCustomizations: Components<Theme> = {
           // H1
           {
             props: { variant: "h1" },
-            style: {
-              fontWeight: "bold",
-            },
+            style: {},
           },
           // H2
           {
             props: { variant: "h2" },
-            style: {
-              fontWeight: "bold",
-            },
+            style: {},
           },
           // H3
           {
             props: { variant: "h3" },
-            style: {
-              fontWeight: "bold",
-            },
+            style: {},
           },
           // H4
           {
             props: { variant: "h4" },
-            style: {
-              fontWeight: "bold",
-            },
+            style: {},
           },
         ],
       },

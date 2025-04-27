@@ -13,7 +13,7 @@ export const theme = createTheme({
   palette,
   shadows: Array(25).fill("none") as Shadows,
   shape: {
-    borderRadius: 0,
+    borderRadius: 12,
   },
   components: {
     ...buttonCustomizations,

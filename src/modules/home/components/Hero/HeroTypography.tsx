@@ -44,6 +44,7 @@ export const HeroTypography = ({
       <Stack direction="row" spacing={3}>
         {HERO_LINK_BUTTONS.map((linkButton) => (
           <Link
+            key={linkButton.to}
             to={linkButton.to}
             style={{
               textDecoration: "none",

@@ -5,6 +5,7 @@ import {
   inputCustomizations,
   menuCustomizations,
   miscCustomizations,
+  navigationCustomizations,
   typographyCustomizations,
 } from "./customizations";
 import { palette } from "./palette";
@@ -22,6 +23,7 @@ export const theme = createTheme({
     ...miscCustomizations,
     ...dialogCustomizations,
     ...typographyCustomizations,
+    ...navigationCustomizations,
   },
   typography: {
     fontFamily: [

@@ -18,6 +18,7 @@ export const navigationCustomizations: Components<Theme> = {
         transition: ".2s",
 
         ".material-symbols-outlined": {
+          marginTop: 1,
           marginLeft: 2,
           fontSize: "1rem",
         },

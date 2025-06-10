@@ -13,9 +13,9 @@ export const AddCollaborationCardTypography = () => {
           Your Project
         </Typography>
         <Link component="button" onClick={() => setContactDialogOpen(true)}>
-          Get Started
+          Get in contact
           <Icon className="material-symbols-outlined" fontSize="small">
-            chevron_right
+            arrow_forward
           </Icon>
         </Link>
       </Box>

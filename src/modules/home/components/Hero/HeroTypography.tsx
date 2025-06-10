@@ -1,5 +1,4 @@
 import {
-  HERO_CTA_TEXT,
   HERO_HEADER,
   HERO_LINK_BUTTONS,
   HERO_SUBTITLE,
@@ -39,7 +38,7 @@ export const HeroTypography = ({
           width: "fit-content",
         }}
       >
-        {HERO_CTA_TEXT}
+        Get in contact
       </Button>
       <Stack direction="row" spacing={3}>
         {HERO_LINK_BUTTONS.map((linkButton) => (

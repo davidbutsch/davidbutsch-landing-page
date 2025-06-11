@@ -1,56 +1,32 @@
 import { ASSETS_URL } from "@/common";
-import { Box, Container, Stack } from "@mui/material";
-import { ProjectCard, ProjectCardOptions } from "./ProjectCard";
-import { ProjectsHeader } from "./ProjectsHeader";
+import { Container, Typography } from "@mui/material";
+import { Project, ProjectProps } from "./Project";
 
-const PROJECT_CARDS: ProjectCardOptions[] = [
+const projects: ProjectProps[] = [
   {
-    content: {
-      header: "Zyae Music: Free and Unlimited Music Streaming",
-      subtitle:
-        "Zyae Music emulates a YouTube Music web client to make API requests. It programmatically downloads YouTube videos, extracts audio, and streams it to the user.",
-      skills: [
-        "Typescript",
-        "React",
-        "Express.js",
-        "MongoDB",
-        "Redis",
-        "Socket.IO",
-      ],
-    },
-    color: "#5CF2CA",
-    backgroundColor: "#142227",
-    image: {
-      src: `${ASSETS_URL}/Projects/Zyae-Music/grid.png`,
-    },
-    links: {
-      app: "https://davidbutsch.com/music/",
-      github: "https://github.com/davidbutsch/zyae-music_v3",
-    },
+    title: "Zyae Music",
+    description: "Free and unlimited music streaming.",
+    homeUrl: "https://davidbutsch.com/music",
+    logoUrl: `${ASSETS_URL}/Projects/Zyae-Music/Zyae-Music-Logo.svg`,
+    imageUrl: `${ASSETS_URL}/Projects/Zyae-Music/grid.svg`,
+    features: [
+      { icon: "share", label: "Shareable Playlists" },
+      { icon: "local_fire_department", label: "Trending Tracks & Artists" },
+      { icon: "favorite", label: "Save Albums & Playlists" },
+      { icon: "music_note", label: "Smart Song Suggestions" },
+    ],
   },
 ];
 
 export const Projects = () => {
   return (
-    <Box
-      sx={{
-        position: "relative",
-        overflow: "clip",
-      }}
-    >
-      <ProjectsHeader />
-
-      <Container
-        sx={{
-          pt: 15,
-        }}
-      >
-        <Stack>
-          {PROJECT_CARDS.map((card) => (
-            <ProjectCard {...card} />
-          ))}
-        </Stack>
-      </Container>
-    </Box>
+    <Container sx={{}}>
+      <Typography variant="h4" mb={6}>
+        Projects
+      </Typography>
+      {projects.map((project) => (
+        <Project key={project.title} {...project} />
+      ))}
+    </Container>
   );
 };

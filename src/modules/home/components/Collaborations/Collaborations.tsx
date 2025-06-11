@@ -1,3 +1,4 @@
+import { ASSETS_URL } from "@/common";
 import { Collaboration } from "@/modules/home";
 import { Container, Grid, Typography } from "@mui/material";
 import { AddCollaborationCard } from "./AddCollaborationCard";
@@ -8,22 +9,22 @@ const collaborations: Collaboration[] = [
     title: "DTE",
     description: "Coaching & Billing Platform",
     homeUrl: "https://www.dtefrisco.com",
-    logoUrl: "/collaborations/logos/DTE-Logo.svg",
-    backgroundImageUrl: "/collaborations/logos/DTE-Skeleton.svg",
+    logoUrl: `${ASSETS_URL}/Collaborations/DTE/DTE-Logo.svg`,
+    backgroundImageUrl: `${ASSETS_URL}/Collaborations/DTE/DTE-Skeleton.svg`,
   },
   {
     title: "BRD",
     description: "Digital Marketing Landing Page",
     homeUrl: "https://blackrobindigital.com",
-    logoUrl: "/collaborations/logos/BRD-Logo.svg",
-    backgroundImageUrl: "/collaborations/logos/BRD-Skeleton.svg",
+    logoUrl: `${ASSETS_URL}/Collaborations/BRD/BRD-Logo.svg`,
+    backgroundImageUrl: `${ASSETS_URL}/Collaborations/BRD/BRD-Skeleton.svg`,
   },
   {
     title: "Firelytics",
     description: "Beta Program Registration",
     homeUrl: "https://firelytics.ai",
-    logoUrl: "/collaborations/logos/Firelytics-Logo.svg",
-    backgroundImageUrl: "/collaborations/logos/Firelytics-Skeleton.svg",
+    logoUrl: `${ASSETS_URL}/Collaborations/Firelytics/Firelytics-Logo.svg`,
+    backgroundImageUrl: `${ASSETS_URL}/Collaborations/Firelytics/Firelytics-Skeleton.svg`,
   },
 ];
 

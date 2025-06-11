@@ -1,4 +1,4 @@
-import { DAVID_BUTSCH_LOGO_URL } from "@/common";
+import { DAVID_BUTSCH_LOGO_FULL_URL } from "@/common";
 import { AppBar, Box, Button, Container, Stack, Toolbar } from "@mui/material";
 import { Link } from "react-router-dom";
 
@@ -9,7 +9,7 @@ const Logo = () => {
   return (
     <Box flex={1} display="flex" alignItems="center">
       <Link to="/" style={{ height: 32 }}>
-        <img src={DAVID_BUTSCH_LOGO_URL} height={32} />
+        <img src={DAVID_BUTSCH_LOGO_FULL_URL} height={32} />
       </Link>
     </Box>
   );
@@ -23,15 +23,21 @@ const NavigationLinks = () => {
     <>
       <ContactDialog open={contactDialogOpen} setOpen={setContactDialogOpen} />
       <Stack direction="row" justifyContent="end" gap={1.5} flex={1}>
-        <a href="/David_Butsch_Resume_Apr_25.pdf" download>
-          <Button variant="outlined" color="white">
+        <a
+          href="/David-Butsch-Resume.pdf"
+          download
+          style={{
+            color: "white",
+          }}
+        >
+          <Button variant="outlined" color="inherit">
             Resume
           </Button>
         </a>
         <Button
           onClick={() => setContactDialogOpen(true)}
           variant="outlined"
-          color="white"
+          color="inherit"
         >
           Contact
         </Button>

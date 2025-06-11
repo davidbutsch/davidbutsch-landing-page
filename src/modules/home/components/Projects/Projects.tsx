@@ -1,3 +1,4 @@
+import { ASSETS_URL } from "@/common";
 import { Box, Container, Stack } from "@mui/material";
 import { ProjectCard, ProjectCardOptions } from "./ProjectCard";
 import { ProjectsHeader } from "./ProjectsHeader";
@@ -20,7 +21,7 @@ const PROJECT_CARDS: ProjectCardOptions[] = [
     color: "#5CF2CA",
     backgroundColor: "#142227",
     image: {
-      src: "/projects/zyae-music/grid.png",
+      src: `${ASSETS_URL}/Projects/Zyae-Music/grid.png`,
     },
     links: {
       app: "https://davidbutsch.com/music/",

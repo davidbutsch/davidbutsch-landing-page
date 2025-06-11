@@ -16,7 +16,7 @@ export const HeroTypography = ({
   return (
     <Stack
       gap={4}
-      pb={5} // add 40px padding from bottom of screen
+      pb={{ xs: 0, md: 5 }} // add 40px padding from bottom of screen
     >
       <Typography
         sx={{

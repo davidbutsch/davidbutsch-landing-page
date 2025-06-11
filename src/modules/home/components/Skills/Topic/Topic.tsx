@@ -11,10 +11,10 @@ export const Topic = (props: TopicProps) => {
 
   return (
     <Box>
-      <Typography variant="h5" mb={4}>
+      <Typography variant="h5" mb={3}>
         {title}
       </Typography>
-      <Stack direction="row" gap={4} flexWrap="wrap">
+      <Stack direction="row" gap={3} flexWrap="wrap">
         {cards.map((card) => (
           <TopicCard
             key={card.title}

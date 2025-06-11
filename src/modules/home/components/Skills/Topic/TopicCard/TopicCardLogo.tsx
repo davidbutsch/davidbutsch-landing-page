@@ -1,4 +1,4 @@
-import { Card } from "@mui/material";
+import { Box, Card } from "@mui/material";
 
 export type TopicCardLogoProps = {
   src: string;
@@ -13,12 +13,16 @@ export const TopicCardLogo = (props: TopicCardLogoProps) => {
       sx={{
         position: "relative",
 
-        height: 64,
-        width: 64,
+        aspectRatio: 1 / 1,
         zIndex: 1,
       }}
     >
-      <img src={src} height={64} width={64} />
+      <Box
+        component="img"
+        src={src}
+        height={{ xs: 48, sm: 56 }}
+        width={{ xs: 48, sm: 56 }}
+      />
     </Card>
   );
 };

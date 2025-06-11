@@ -14,14 +14,14 @@ const collaborations: Collaboration[] = [
   },
   {
     title: "BRD",
-    description: "Digital Marketing Landing Page",
+    description: "Digital Marketing",
     homeUrl: "https://blackrobindigital.com",
     logoUrl: `${ASSETS_URL}/Collaborations/BRD/BRD-Logo.svg`,
     backgroundImageUrl: `${ASSETS_URL}/Collaborations/BRD/BRD-Skeleton.svg`,
   },
   {
     title: "Firelytics",
-    description: "Beta Program Registration",
+    description: "AI Analytics",
     homeUrl: "https://firelytics.ai",
     logoUrl: `${ASSETS_URL}/Collaborations/Firelytics/Firelytics-Logo.svg`,
     backgroundImageUrl: `${ASSETS_URL}/Collaborations/Firelytics/Firelytics-Skeleton.svg`,
@@ -31,10 +31,10 @@ const collaborations: Collaboration[] = [
 export const Collaborations = () => {
   return (
     <Container>
-      <Typography variant="h4" mb={4}>
+      <Typography variant="h4" mb={6}>
         Clients & Collaborations
       </Typography>
-      <Grid container spacing={2}>
+      <Grid container spacing={3}>
         {collaborations.map((collaboration) => (
           <Grid key={collaboration.title} size={{ xs: 12, sm: 6, lg: 4 }}>
             <CollaborationCard collaboration={collaboration} />

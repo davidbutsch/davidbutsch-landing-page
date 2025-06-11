@@ -158,10 +158,10 @@ const topics: TopicProps[] = [
 export const Skills = () => {
   return (
     <Container>
-      <Typography variant="h4" mb={8}>
+      <Typography variant="h4" mb={6}>
         Skills
       </Typography>
-      <Stack gap={8}>
+      <Stack gap={6}>
         {topics.map((topic) => (
           <Topic key={topic.title} title={topic.title} cards={topic.cards} />
         ))}

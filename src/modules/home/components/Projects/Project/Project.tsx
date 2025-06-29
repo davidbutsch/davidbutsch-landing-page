@@ -18,7 +18,7 @@ export const Project = (props: ProjectProps) => {
   const { title, description, homeUrl, logoUrl, imageUrl, features } = props;
 
   return (
-    <Grid container direction="row" spacing={8}>
+    <Grid container direction="row" alignItems="center" spacing={8}>
       <Grid size={{ xs: 12, md: 5 }}>
         <ProjectLogo src={logoUrl} />
         <ProjectTypography title={title} description={description} />
@@ -31,7 +31,7 @@ export const Project = (props: ProjectProps) => {
           position: "relative",
 
           maskImage:
-            "linear-gradient(to top, transparent 25%, #FFFFFF 80%, transparent)",
+            "linear-gradient(to top, transparent 0%, #FFFFFF, #FFFFFF, transparent)",
         }}
       >
         <ProjectImage src={imageUrl} />

@@ -7,5 +7,5 @@ export type ProjectImageProps = {
 export const ProjectImage = (props: ProjectImageProps) => {
   const { src } = props;
 
-  return <Box component="img" src={src} />;
+  return <Box component="img" src={src} width="100%" />;
 };

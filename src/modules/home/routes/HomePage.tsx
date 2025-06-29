@@ -6,8 +6,8 @@ export const HomePage = () => {
     <Stack direction="column" gap={15} pb={15}>
       <Hero />
       <Collaborations />
-      <Skills />
       <Projects />
+      <Skills />
     </Stack>
   );
 };

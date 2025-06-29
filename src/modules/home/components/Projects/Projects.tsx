@@ -4,18 +4,6 @@ import { Project, ProjectProps } from "./Project";
 
 const projects: ProjectProps[] = [
   {
-    title: "Zyae Music",
-    description: "Free and unlimited music streaming.",
-    homeUrl: "https://music.zyae.net",
-    logoUrl: `${ASSETS_URL}/Projects/Zyae-Music/Zyae-Music-Logo.svg`,
-    imageUrl: `${ASSETS_URL}/Projects/Zyae-Music/grid.svg`,
-    features: [
-      { icon: "local_fire_department", label: "Trending Artists" },
-      { icon: "favorite", label: "Save Music" },
-      { icon: "music_note", label: "Autoplay" },
-    ],
-  },
-  {
     title: "Jot",
     description: "The minimalist solution for collaborative note taking.",
     homeUrl: "https://instajot.app/",
@@ -26,6 +14,18 @@ const projects: ProjectProps[] = [
       { icon: "upload_file", label: "File Uploads" },
       { icon: "edit_document", label: "WYSIWYG Editor" },
       { icon: "web", label: "Publish Jots" },
+    ],
+  },
+  {
+    title: "Zyae Music",
+    description: "Free and unlimited music streaming.",
+    homeUrl: "https://music.zyae.net",
+    logoUrl: `${ASSETS_URL}/Projects/Zyae-Music/Zyae-Music-Logo.svg`,
+    imageUrl: `${ASSETS_URL}/Projects/Zyae-Music/grid.svg`,
+    features: [
+      { icon: "local_fire_department", label: "Trending Artists" },
+      { icon: "favorite", label: "Save Music" },
+      { icon: "music_note", label: "Autoplay" },
     ],
   },
 ];

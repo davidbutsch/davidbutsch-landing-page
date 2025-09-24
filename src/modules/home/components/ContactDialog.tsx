@@ -195,9 +195,7 @@ export const ContactDialog = ({ open, setOpen }: ContactDialogOptions) => {
         </Stack>
       </DialogContent>
       <DialogActions>
-        <Button color="white" onClick={() => setOpen(false)}>
-          Close
-        </Button>
+        <Button onClick={() => setOpen(false)}>Close</Button>
         <Button
           loading={isLoading}
           variant="contained"
@@ -208,13 +206,4 @@ export const ContactDialog = ({ open, setOpen }: ContactDialogOptions) => {
       </DialogActions>
     </Dialog>
   );
-
-  //   return (
-  //     <form onSubmit={onSubmit}>
-  //       <input type="text" name="name" />
-  //       <input type="email" name="email" />
-  //       <textarea name="message"></textarea>
-  //       <button type="submit">Submit Form</button>
-  //     </form>
-  //   );
 };

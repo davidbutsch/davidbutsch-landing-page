@@ -1,8 +1,11 @@
 import { useRoutes } from "react-router-dom";
 
-import { homeRoutes } from "@/modules/home";
 import { CssBaseline } from "@mui/material";
 import { Outlet, RouteObject } from "react-router-dom";
+
+import { homeRoutes } from "@/modules/home";
+
+import { authRoutes } from "@/modules/auth";
 
 export const routes: RouteObject[] = [
   {
@@ -16,6 +19,7 @@ export const routes: RouteObject[] = [
       {
         children: homeRoutes,
       },
+      { children: authRoutes },
     ],
   },
 ];

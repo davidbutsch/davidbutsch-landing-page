@@ -9,14 +9,15 @@ import { PostCardTitle } from "./PostCardTitle";
 
 export type PostCardProps = {
   postId: string;
+  jotId: string;
 };
 
 export const PostCard = (props: PostCardProps) => {
-  const { postId } = props;
+  const { postId, jotId } = props;
 
   const navigate = useNavigate();
 
-  const onClick = () => navigate(`/blog/post/${jot?.id}`);
+  const onClick = () => navigate(`/blog/post/${postId}`);
 
   // Get post
   const getPostQuery = useQuery({
@@ -27,8 +28,8 @@ export const PostCard = (props: PostCardProps) => {
 
   // Get Jot
   const getJotQuery = useQuery({
-    queryKey: ["jot", postId],
-    queryFn: () => getJot(postId),
+    queryKey: ["jot", jotId],
+    queryFn: () => getJot(jotId),
     enabled: !!post,
   });
   const jot = getJotQuery.data;

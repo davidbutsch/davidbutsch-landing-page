@@ -6,6 +6,7 @@ export type PostTag = {
 
 export type Post = {
   id: string;
+  jotId: string;
   tags: PostTag[];
   createdAt: number;
 };

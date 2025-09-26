@@ -16,8 +16,8 @@ export const PostPage = () => {
 
   // Get Jot
   const getJotQuery = useQuery({
-    queryKey: ["jot", postId],
-    queryFn: () => getJot(postId),
+    queryKey: ["jot", post?.jotId],
+    queryFn: () => getJot(post?.jotId!),
     enabled: !!post,
   });
   const jot = getJotQuery.data;

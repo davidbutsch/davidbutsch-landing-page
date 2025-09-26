@@ -35,7 +35,7 @@ export const BlogPage = () => {
             <Grid container spacing={2} direction="row">
               {yearPosts.map((post) => (
                 <Grid key={post.id} size={{ xs: 12, sm: 6, md: 4 }}>
-                  <PostCard postId={post.id} />
+                  <PostCard postId={post.id} jotId={post.jotId} />
                 </Grid>
               ))}
             </Grid>

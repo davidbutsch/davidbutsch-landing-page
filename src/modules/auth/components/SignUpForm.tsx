@@ -1,3 +1,4 @@
+import { storeUser } from "@/modules/auth";
 import {
   ConfirmationCodeSchema,
   PasswordsSchema,
@@ -77,7 +78,8 @@ export const SignUpForm = () => {
       // After sign up is confirmed, sign in user
       await autoSignIn();
 
-      // TODO: After user is signed in, set user state
+      // After user is signed in, set user state
+      storeUser();
 
       // Finally, navigate to root with page reload
       window.location.href = "/";

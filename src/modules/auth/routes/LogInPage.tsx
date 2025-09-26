@@ -1,3 +1,4 @@
+import { storeUser } from "@/modules/auth";
 import { signIn } from "@aws-amplify/auth";
 import {
   Button,
@@ -21,7 +22,8 @@ export const LogInPage = () => {
   const signInUserMutation = useMutation({
     mutationFn: signIn,
     onSuccess: async () => {
-      // TODO: implement user store
+      // After user is signed in, set user state
+      storeUser();
 
       // Navigate to page root with reload
       window.location.href = "/";

@@ -1,8 +1,7 @@
-import { PostTag } from "@/modules/blog";
 import { Chip, Stack } from "@mui/material";
 
 export type PostCardTagsProps = {
-  tags?: PostTag[] | undefined;
+  tags?: string[] | undefined;
 };
 
 export const PostCardTags = (props: PostCardTagsProps) => {
@@ -13,7 +12,7 @@ export const PostCardTags = (props: PostCardTagsProps) => {
   return (
     <Stack direction="row">
       {tags.map((tag) => (
-        <Chip key={tag.label} variant="outlined" label={tag.label} />
+        <Chip key={tag} variant="outlined" label={tag} />
       ))}
     </Stack>
   );

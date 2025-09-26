@@ -13,7 +13,7 @@ export const PostCardTags = (props: PostCardTagsProps) => {
   return (
     <Stack direction="row">
       {tags.map((tag) => (
-        <Chip variant="outlined" label={tag.label} />
+        <Chip key={tag.label} variant="outlined" label={tag.label} />
       ))}
     </Stack>
   );

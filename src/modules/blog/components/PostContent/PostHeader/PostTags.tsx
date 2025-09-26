@@ -11,7 +11,7 @@ export const PostTags = (props: PostTagsProps) => {
   return (
     <Stack direction="row" mt={2}>
       {tags.map((tag) => (
-        <Chip variant="outlined" label={tag.label} />
+        <Chip key={tag.label} variant="outlined" label={tag.label} />
       ))}
     </Stack>
   );

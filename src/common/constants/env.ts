@@ -4,6 +4,7 @@ const createEnv = () => {
   // schema validation with zod
   const EnvSchema = z.object({
     API_URL: z.string(),
+    JOT_API_URL: z.string(),
     USER_POOL_ID: z.string(),
     USER_POOL_CLIENT_ID: z.string(),
     IDENTITY_POOL_ID: z.string(),

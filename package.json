@@ -17,9 +17,12 @@
     "@tanstack/react-query": "^5.74.4",
     "@tanstack/react-query-devtools": "^5.74.4",
     "aws-amplify": "^6.15.6",
+    "highlight.js": "^11.11.1",
+    "html-react-parser": "^5.2.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.5.1",
+    "use-query-params": "^2.2.1",
     "vite-plugin-mkcert": "^1.17.8",
     "whatamesh": "^0.2.0",
     "zod": "^3.24.3"

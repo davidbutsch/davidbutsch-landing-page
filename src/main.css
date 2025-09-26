@@ -33,3 +33,143 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* ProseMirror base styling */
+.ProseMirror {
+  min-height: calc(100vh - 200px);
+  outline: none;
+  word-break: normal !important;
+}
+
+.ProseMirror p {
+  margin: 0;
+  padding: 4px 0;
+}
+
+/* Placeholder styling */
+p.is-editor-empty:first-of-type::before,
+.tiptap p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  float: left;
+  color: #adb5bd;
+  pointer-events: none;
+  height: 0;
+  opacity: 0;
+  animation: fadein 0.3s ease forwards;
+  animation-delay: 150ms;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Blockquote */
+blockquote {
+  border-left: 4px solid black;
+  margin: 1.5rem 0;
+  padding-left: 1rem;
+}
+
+/* Inline code  */
+code {
+  background: #161626 !important;
+  color: #ffffff;
+  font-size: 0.875em;
+  font-family: "JetBrainsMono", monospace;
+  padding: 0.15rem 0.3rem;
+  border-radius: 0.25rem;
+}
+
+/* Code block styling */
+pre {
+  background: #161626;
+  color: #fff;
+  font-family: "JetBrainsMono", monospace;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+pre code {
+  color: inherit;
+  padding: 0;
+  background: none;
+  font-size: 0.8rem;
+  white-space: pre-wrap;
+}
+
+/* Tiptap-specific styles */
+.tiptap:first-child {
+  margin-top: 0;
+}
+
+/* List styling */
+.tiptap ul,
+.tiptap ol {
+  padding: 0 1rem;
+  margin: 1.25rem 1rem 1.25rem 0.4rem;
+}
+
+.tiptap ul li p,
+.tiptap ol li p {
+  margin: 0.25em 0;
+}
+
+/* Task list styles */
+.tiptap ul[data-type="taskList"] {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tiptap ul[data-type="taskList"] li {
+  display: flex;
+  align-items: center;
+}
+
+.tiptap ul[data-type="taskList"] li > label {
+  flex: 0 0 auto;
+  margin-right: 0.5rem;
+  user-select: none;
+}
+
+.tiptap ul[data-type="taskList"] li > div {
+  flex: 1 1 auto;
+}
+
+.tiptap ul[data-type="taskList"] input[type="checkbox"] {
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.tiptap ul[data-type="taskList"] ul[data-type="taskList"] {
+  margin: 0;
+}
+
+a {
+  cursor: pointer;
+}
+
+.tiptap img {
+  border-radius: 12px;
+  width: 100%;
+
+  max-height: fit-content;
+}
+
+.image-component {
+  border-radius: 12px;
+  --box-color: black;
+}
+.image-component .image-resizer {
+  border-radius: 12px;
+}
+
+body {
+  color: black;
+}

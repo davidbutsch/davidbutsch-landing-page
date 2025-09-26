@@ -86,8 +86,6 @@ export const SignUpForm = () => {
 
   // METHODS
 
-  console.log(activeStep);
-
   /**
    * Handles the form submission event.
    *
@@ -175,8 +173,6 @@ export const SignUpForm = () => {
       repeatPassword: unsafeErrors?.repeatPassword || current.password,
       code: unsafeErrors?.code || current.code,
     }));
-
-    console.log(errors);
 
     // Return true if no errors
     return !errors;

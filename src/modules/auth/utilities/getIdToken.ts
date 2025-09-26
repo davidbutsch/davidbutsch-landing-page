@@ -12,7 +12,6 @@ export const getIdToken = async () => {
 
     return idToken;
   } catch (error) {
-    console.log(error);
     console.warn(`Failed to get ID token. User is probably signed out.`);
   }
 };

@@ -11,7 +11,7 @@ export const ProjectFeatures = (props: ProjectFeaturesProps) => {
   return (
     <Stack mt={4} direction="row" gap={1} flexWrap="wrap">
       {features.map((feature) => (
-        <ProjectFeature {...feature} />
+        <ProjectFeature key={feature.label} {...feature} />
       ))}
     </Stack>
   );

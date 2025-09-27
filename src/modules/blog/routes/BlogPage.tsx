@@ -23,7 +23,8 @@ export const BlogPage = () => {
     : {};
 
   return (
-    <Container>
+    <Container sx={{ pb: 15 }}>
+      <Typography variant="h4">The Blog</Typography>
       {/* display posts by year */}
       {Object.entries(postsByYear)
         .sort(([yearA], [yearB]) => Number(yearB) - Number(yearA))

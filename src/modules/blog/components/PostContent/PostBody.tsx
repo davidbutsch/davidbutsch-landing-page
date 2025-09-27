@@ -17,5 +17,9 @@ export const PostBody = (props: PostBodyProps) => {
     });
   }, [html]);
 
-  return <Box mt={6}>{parse(html || "")}</Box>;
+  return (
+    <Box className="tiptap" mt={6}>
+      {parse(html || "")}
+    </Box>
+  );
 };

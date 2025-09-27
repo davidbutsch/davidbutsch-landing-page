@@ -4,7 +4,16 @@ import { useNavigate } from "react-router-dom";
 export const BackButton = () => {
   const navigate = useNavigate();
 
-  const onClick = () => navigate("/blog");
+  const onClick = () => {
+    if (
+      window.history.length > 1 &&
+      document.referrer.includes(window.location.origin)
+    ) {
+      navigate(-1); // Go back to the previous page in history
+    } else {
+      navigate("/blog", { replace: true }); // Navigate to a fallback route if no previous page
+    }
+  };
 
   return (
     <Button

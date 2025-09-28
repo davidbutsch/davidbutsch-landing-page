@@ -1,3 +1,4 @@
+export * from "./BlogPromotional";
 export * from "./Collaborations";
 export * from "./ContactDialog";
 export * from "./Hero";

@@ -14,6 +14,8 @@ export const CardsPreview = () => {
   });
   const posts = getAllPostsQuery.data?.slice(0, 6);
 
+  if (posts?.length == 0) return;
+
   return (
     <Stack alignItems="center">
       <Typography variant="h4" textAlign="center" mb={6}>

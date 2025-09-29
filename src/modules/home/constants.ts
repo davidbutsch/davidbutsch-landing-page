@@ -1,6 +1,6 @@
 export const HERO_HEADER = "I bring companies to the web.";
 export const HERO_SUBTITLE =
-  "Full-stack development, UI/UX design, and cloud infastructure—handled from start to finish.";
+  "Full-stack development, UI/UX design, cloud infastructure, etc";
 
 export const HERO_CTA_TEXT = "Let's Talk";
 

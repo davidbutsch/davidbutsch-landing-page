@@ -1,4 +1,4 @@
-import { DAVID_BUTSCH_LOGO_FULL_URL } from "@/common";
+import { DAVID_BUTSCH_LOGO_FULL_URL, DAVID_BUTSCH_RESUME_URL } from "@/common";
 import { AppBar, Box, Button, Container, Stack, Toolbar } from "@mui/material";
 import { Link } from "react-router-dom";
 
@@ -24,8 +24,7 @@ const NavigationLinks = () => {
       <ContactDialog open={contactDialogOpen} setOpen={setContactDialogOpen} />
       <Stack direction="row" justifyContent="end" gap={1.5} flex={1}>
         <a
-          href="/David-Butsch-Resume.pdf"
-          download
+          href={DAVID_BUTSCH_RESUME_URL}
           style={{
             color: "white",
           }}

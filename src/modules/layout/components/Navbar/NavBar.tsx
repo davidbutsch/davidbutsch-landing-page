@@ -25,6 +25,7 @@ const NavigationLinks = () => {
       <Stack direction="row" justifyContent="end" gap={1.5} flex={1}>
         <a
           href={DAVID_BUTSCH_RESUME_URL}
+          target="_blank"
           style={{
             color: "white",
           }}

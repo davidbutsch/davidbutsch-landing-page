@@ -45,6 +45,7 @@ export const HeroTypography = ({
           <Link
             key={linkButton.to}
             to={linkButton.to}
+            target="_blank"
             style={{
               textDecoration: "none",
               color: "inherit",

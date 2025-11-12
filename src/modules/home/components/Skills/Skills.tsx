@@ -121,6 +121,11 @@ const topics: TopicProps[] = [
         homeUrl: "https://www.python.org/",
         logoUrl: `${ASSETS_URL}/Skills/Languages/Python.svg`,
       },
+      {
+        title: "C++",
+        homeUrl: "https://isocpp.org/",
+        logoUrl: `${ASSETS_URL}/Skills/Languages/C%2B%2B.svg`,
+      },
     ],
   },
   {
@@ -132,14 +137,20 @@ const topics: TopicProps[] = [
         logoUrl: `${ASSETS_URL}/Skills/Misc/Git.svg`,
       },
       {
-        title: "Stripe",
-        homeUrl: "https://stripe.com/",
-        logoUrl: `${ASSETS_URL}/Skills/Misc/Stripe.svg`,
+        title: "STM32",
+        homeUrl:
+          "https://www.st.com/en/microcontrollers-microprocessors/stm32-32-bit-arm-cortex-mcus.html",
+        logoUrl: `${ASSETS_URL}/Skills/Misc/STM32.svg`,
       },
       {
         title: "Ubuntu",
         homeUrl: "https://ubuntu.com/",
         logoUrl: `${ASSETS_URL}/Skills/Misc/Ubuntu.svg`,
+      },
+      {
+        title: "Stripe",
+        homeUrl: "https://stripe.com/",
+        logoUrl: `${ASSETS_URL}/Skills/Misc/Stripe.svg`,
       },
       {
         title: "Adobe Illustrator",

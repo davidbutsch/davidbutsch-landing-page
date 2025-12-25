@@ -122,6 +122,11 @@ const topics: TopicProps[] = [
         logoUrl: `${ASSETS_URL}/Skills/Languages/Python.svg`,
       },
       {
+        title: "C",
+        homeUrl: "https://www.c-language.org/",
+        logoUrl: `${ASSETS_URL}/Skills/Languages/C.svg`,
+      },
+      {
         title: "C++",
         homeUrl: "https://isocpp.org/",
         logoUrl: `${ASSETS_URL}/Skills/Languages/C%2B%2B.svg`,
